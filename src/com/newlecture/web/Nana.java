@@ -23,12 +23,12 @@ public class Nana extends HttpServlet{
 	 
 	String temp = req.getParameter("cnt");
 	
-	int cnt_ = 0;
+	int cnt = 0;
 	
 	if(temp != null && !temp.equals(""))
-		cnt_ = Integer.parseInt(temp);
+		cnt = Integer.parseInt(temp);
 	
-	 for(int i=0; i<cnt_; i++) {
+	 for(int i=0; i<cnt; i++) {
 		 out.println((i+1)+": 안녕 Servlet!");
 	 }
 	}
