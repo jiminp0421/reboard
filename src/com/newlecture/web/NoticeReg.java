@@ -13,20 +13,22 @@ import javax.servlet.http.HttpServletResponse;
 public class NoticeReg extends HttpServlet{
 
 	@Override
-	protected void service(HttpServletRequest req,
+	protected void service(HttpServletRequest request,
 			HttpServletResponse resp) throws ServletException, IOException {
 		
 	resp.setCharacterEncoding("UTF-8");	//UTF-8로 보내는것
 	resp.setContentType("text/html; charset=UTF-8"); //브라우저에게 요대로 해석해라
 	
+	
 	PrintWriter out = resp.getWriter();
 	
-	String title = req.getParameter("title");
-	String content = req.getParameter("content");
+	String title = request.getParameter("title");
+	String content = request.getParameter("content");
 	
 	//정상적으로 출력되면 작동
 	out.println(title);
 	out.println(content);
+	System.out.println("잘도착했어용");
 	
 	}
 }
